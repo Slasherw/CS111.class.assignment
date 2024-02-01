@@ -16,6 +16,6 @@ public class Ball {
     }
 
     public double getVolume(){
-        return 4.00/3.00*Math.PI*Math.pow(radius,3);
+        return (4.00/3.00)*Math.PI*Math.pow(radius,3);
     }
 }
