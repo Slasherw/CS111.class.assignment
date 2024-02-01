@@ -9,7 +9,7 @@ public class BallTest {
         
         Ball cal = new Ball();
         cal.setRadius(radius);
-        System.out.printf("The ball radius '%.2f' has surface area=%.3f The ball%nradius '%.2f' has volume =%.3f",cal.getRadius(),cal.getSurface(),cal.getRadius(),cal.getVolume());
+        System.out.printf("The ball radius '%.2ld' has surface area=%.3ld The ball\nradius '%.2f' has volume =%.3f",cal.getRadius(),cal.getSurface(),cal.getRadius(),cal.getVolume());
         
         input.close();
     }
