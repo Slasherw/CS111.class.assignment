@@ -4,12 +4,15 @@ import java.util.Scanner;
 public class FourWordsTest {
 
     public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
         FourWords words4 = new FourWords();
-        words4.add("cash");
-        words4.add("apple");
-        words4.add("trees");
-        words4.add("bee");
-        words4.add("something");
         words4.printWords();
+        for(int i=0;i<=4;i++){
+            System.out.print("Enter your word: ");
+            String word =input.nextLine();
+            words4.add(word);
+            words4.printWords();
+        }
+        input.close();
     }
 }
