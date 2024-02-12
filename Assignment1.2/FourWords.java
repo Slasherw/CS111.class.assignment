@@ -31,96 +31,34 @@ public class FourWords {
 
 
     public String getMin(){
+        if(count==0){
+            return null;
+        }
         String min=word1;
-        //compare word1
-        if(word1.compareTo(word2)<0){
-            min=word1;
-        }
-        if(word1.compareTo(word3)<0){
-            min=word1;
-        }
-        if(word1.compareTo(word4)<0){
-            min=word1;
-        }
-
-        //compare word2
-        if(word2.compareTo(word1)<0){
+        if(word2.compareTo(min)<0){
             min=word2;
         }
-        if(word2.compareTo(word3)<0){
-            min=word2;
-        }
-        if(word2.compareTo(word4)<0){
-            min=word2;
-        }
-
-        //compare word3
-        if(word3.compareTo(word1)<0){
+        if(word3.compareTo(min)<0){
             min=word3;
         }
-        if(word3.compareTo(word2)<0){
-            min=word3;
-        }
-        if(word3.compareTo(word4)<0){
-            min=word3;
-        }
-
-        //compare word4
-        if(word4.compareTo(word1)<0){
-            min=word4;
-        }
-        if(word4.compareTo(word2)<0){
-            min=word4;
-        }
-        if(word4.compareTo(word3)<0){
+        if(word4.compareTo(min)<0){
             min=word4;
         }
         return min;
     }
 
     public String getMax(){
+        if(count==0){
+            return null;
+        }
         String max=word1;
-        //compare word1
-        if(word1.compareTo(word2)<0){
-            max=word1;
-        }
-        if(word1.compareTo(word3)<0){
-            max=word1;
-        }
-        if(word1.compareTo(word4)<0){
-            max=word1;
-        }
-
-        //compare word2
-        if(word2.compareTo(word1)<0){
+        if(word2.compareTo(max)>0){
             max=word2;
         }
-        if(word2.compareTo(word3)<0){
-            max=word2;
-        }
-        if(word2.compareTo(word4)<0){
-            max=word2;
-        }
-
-        //compare word3
-        if(word3.compareTo(word1)<0){
+        if(word3.compareTo(max)>0){
             max=word3;
         }
-        if(word3.compareTo(word2)<0){
-            max=word3;
-        }
-        if(word3.compareTo(word4)<0){
-            max=word3;
-        }
-
-        //compare word4
-        if(word4.compareTo(word1)<0){
-            max=word4;
-        }
-        if(word4.compareTo(word2)<0){
-            max=word4;
-        }
-        if(word4.compareTo(word3)<0){
+        if(word4.compareTo(max)>0){
             max=word4;
         }
         return max;
@@ -135,6 +73,6 @@ public class FourWords {
         System.out.println("The lexicographic minimum is "+getMin());
         System.out.println("The lexicographic maximum is "+getMax());
         System.out.println("Total length "+(word1.length()+word2.length()+word3.length()+word4.length()));
-        System.out.println("Average lenght "+((word1.length()+word2.length()+word3.length()+word4.length())/4.00));
+        System.out.println("Average lenght "+((word1.length()+word2.length()+word3.length()+word4.length())/4f));
     }
 }
