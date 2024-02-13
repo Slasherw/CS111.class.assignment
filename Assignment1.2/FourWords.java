@@ -71,17 +71,12 @@ public class FourWords {
         if(count==0){
             System.out.println("No words set up yet!");
         }
-        if(count==0){
-            System.out.println("List of words:\n"+
-            "\t"+word1+"\n"+
-            "\t"+word2+"\n"+
-            "\t"+word3+"\n"+
-            "\t"+word4+"\n");
-        }else System.out.println("Round "+count+": "+"List of words:\n"+
-        "\t"+word1+"\n"+
-        "\t"+word2+"\n"+
-        "\t"+word3+"\n"+
-        "\t"+word4+"\n");
+        System.out.println("List of words:");
+        if(count==0)System.out.println("");
+        if(word1!="")System.out.println("\t"+word1);
+        if(word2!="")System.out.println("\t"+word2);
+        if(word3!="")System.out.println("\t"+word3);
+        if(word4!="")System.out.println("\t"+word4);
         
         System.out.println("The lexicographic minimum is "+getMin());
         System.out.println("The lexicographic maximum is "+getMax());
@@ -90,7 +85,7 @@ public class FourWords {
             System.out.println("Total lenght 0");
         }else System.out.println("Total length "+(word1.length()+word2.length()+word3.length()+word4.length()));
         if(count==0){
-            System.out.println("Average lenght 0");
-        }else System.out.println("Average lenght "+((word1.length()+word2.length()+word3.length()+word4.length())/4f));
+            System.out.printf("Average lenght 0.000000\n");
+        }else System.out.printf("Average lenght %.6f\n",((word1.length()+word2.length()+word3.length()+word4.length())/4f));
     }
 }
