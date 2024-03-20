@@ -38,7 +38,7 @@ public class RomanNumber {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         for(int i=1;i>0;i++){
-            System.out.println("Input the roman number: ");
+            System.out.print("Input the roman number: ");
             String num = input.nextLine();
             switchRomanToNumbers(num);
         }
