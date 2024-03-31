@@ -31,9 +31,17 @@ public class Bank {
     public Account findMin(){
         //return null if no account found
         //else return Account that has least amount of money in accountList
+        Account leastBalanceNow;
+        double leastBalance;
         for (Account account : accountList) {
-            
-        }
+            if(account==0){
+                account.getBalance()=leastBalance;
+            }
+            leastBalance = account.getBalance();
+            if(account.getBalance()<leastBalance){
+                return account;
+            }
+        }return null;
     }
 
     public Account findMax(){
