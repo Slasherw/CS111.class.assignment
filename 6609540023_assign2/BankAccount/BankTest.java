@@ -61,13 +61,12 @@ public class BankTest {
                 case 'Q':
                     loop=false;
                     break;
-                    
+
                 default:
                     break;
             }
         }
-        
-
+        input.close();
     }
 }
     
