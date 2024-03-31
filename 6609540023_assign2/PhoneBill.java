@@ -36,7 +36,7 @@ public class PhoneBill {
 
             if(time == "Q"){
                 i=false;
-                
+                break;
             }
         }input.close();
     }
