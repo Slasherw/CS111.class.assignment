@@ -9,6 +9,9 @@ public class Bank {
         accountList.add(acct);
     }
 
+    public ArrayList<Account> getAccountList(){
+        return accountList;
+    }
     public Account getAccount(int index){//return index in Account
         return accountList.get(index);
     }

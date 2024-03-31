@@ -10,10 +10,6 @@ public class Account {
         lastAccountNumber = accountNumber;
     }
 
-    public double getBalance(){
-       return balance;
-    }
-
     public void deposit(double depositAmount){
         balance += depositAmount;
     }
@@ -26,5 +22,13 @@ public class Account {
             balance -= withdrawAmount;
             return true;
         }
+    }
+    
+    public double getBalance(){
+       return balance;
+    }
+    
+    public int getAccountNumber(){
+        return accountNumber;
     }
 }
