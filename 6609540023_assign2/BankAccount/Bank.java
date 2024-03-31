@@ -16,17 +16,24 @@ public class Bank {
     public ArrayList<Account> findAccounts(double amount){
         //return ArrayList that have money in Account >= amount 
         //if ArrayList is not found return null
-        for (Account money : accountList) {
-            if(amount<money.getBalance()){
-                return null;
-            } else return accountList;//?
+        ArrayList<Account> findAccount = new ArrayList<Account>();
+        for (Account account : accountList) {
+            if(account.getBalance() >= amount) {
+                findAccount.add(account);
+            }
+            // if(amount<money.getBalance()){
+            //     return null;
+            // } 
         }
+        return findAccount;//?
     }
 
     public Account findMin(){
         //return null if no account found
         //else return Account that has least amount of money in accountList
-        
+        for (Account account : accountList) {
+            
+        }
     }
 
     public Account findMax(){
