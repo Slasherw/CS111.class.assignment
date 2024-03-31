@@ -11,7 +11,7 @@ public class PhoneBill {
             System.out.print("Enter minutes (Q = Quit): ");
             String time = input.nextLine();
             if(time.equalsIgnoreCase("Q")){
-                loop = false;
+                //loop = false;
                 break;
             }
             try{
