@@ -6,8 +6,8 @@ public class PhoneBill {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        boolean loop ;
-        while ( loop = true) {
+        boolean loop = true ;
+        while (loop) {
             System.out.print("Enter minutes (Q = Quit): ");
             String time = input.nextLine();
             if(time.equalsIgnoreCase("Q")){
