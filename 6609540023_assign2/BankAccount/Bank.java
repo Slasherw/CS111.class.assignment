@@ -21,43 +21,57 @@ public class Bank {
             if(account.getBalance() >= amount) {
                 findAccount.add(account);
             }
-            // if(amount<money.getBalance()){
-            //     return null;
-            // } 
         }
-        return findAccount;//?
+        return findAccount;
     }
 
     public Account findMin(){
         //return null if no account found
         //else return Account that has least amount of money in accountList
-        Account leastBalanceNow;
-        double leastBalance;
-        for (Account account : accountList) {
-            if(account==0){
-                account.getBalance()=leastBalance;
+        Account minAccount = accountList.get(0);
+        for (int i = 1;i < accountList.size();i++) {
+            if(accountList.get(i).getBalance() < minAccount.getBalance()){
+               minAccount = accountList.get(i);
             }
-            leastBalance = account.getBalance();
-            if(account.getBalance()<leastBalance){
-                return account;
-            }
-        }return null;
+        }
+        return minAccount;
     }
 
     public Account findMax(){
         //return null if no account found
         //else return Account that has most amount of money in accountList
+        Account maxAccount = accountList.get(0);
+        for (int i = 1;i < accountList.size();i++) {
+            if(accountList.get(i).getBalance() > maxAccount.getBalance()){
+               maxAccount = accountList.get(i);
+            }
+        }
+        return maxAccount;
     }
 
     public void addInterest(){
         //increase interest 3% in each account in accountList
+        for (Account account : accountList) {
+            double interest = account.getBalance() * 0.03;
+            account.deposit(interest);
+        }
     }
 
     public double getTotal(){
         //find the sum of money in accountList
+        double sum = 0.0;
+        for (Account account : accountList) {
+            sum+=account.getBalance();
+        }
+        return sum;
     }
 
     public double getAverage(){
         //find the average of money in accountList
+        double sum = 0.0;
+        for (Account account : accountList) {
+            sum+=account.getBalance();
+        }
+        return sum/accountList.size();
     }
 }
