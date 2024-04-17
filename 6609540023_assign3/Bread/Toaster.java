@@ -7,15 +7,17 @@ interface Toastable{
     void getToastState();
 }
 
-public class Toaster {
+public class Toaster{
     private ArrayList<Toastable> item;
 
+    //create toaster
     public Toaster(){
         item = new ArrayList<>();
     }
 
     public void add(Toastable item){
         //add new toastable item
+        
     }
 
     public void print(){
