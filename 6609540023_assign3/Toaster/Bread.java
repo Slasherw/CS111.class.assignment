@@ -1,6 +1,6 @@
 //นพกรณ์ สงเคราะห์
 //6609540023
-package 6609540023_assign3.Bread;
+package 6609540023_assign3.Toaster;
 
 public class Bread implements Toastable {
     public static final String BURNT="Burn";
@@ -9,12 +9,17 @@ public class Bread implements Toastable {
     private String state;
 
     public void toast(){
-        Toastable bread = new Toastable();
-        bread.setState(CRISP)
+        System.out.println("Bread is toasing");
+        if(state == SOFT){
+            state == CRISP;
+        }
+        if(state == CRISP){
+            state == BURNT;
+        }
     }
 
     public void getToastState(){
-        
+        System.out.println(state);
     }
 
     //create bread
