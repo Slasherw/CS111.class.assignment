@@ -1,6 +1,6 @@
 package 6609540023_assign3.Employee;
 
-public class Employee {
+public abstract class Employee {
 
     protected String firstName;
     protected String lastName;
@@ -49,4 +49,6 @@ public class Employee {
     protected int getPerformanceScore(){
         return performanceScore;
     }
+
+    abstract protected double getMonthlyPayment();
 }
