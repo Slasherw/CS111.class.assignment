@@ -36,10 +36,7 @@ public class HourlyEmployee extends Employee {
     }
 
     protected double getMonthlyPayment(){
-        monthlyPayment = 
+        monthlyPayment = calculatePersonalHourlyWage * workingSessionPerMonth;
     }
-
-
-
 
 }
