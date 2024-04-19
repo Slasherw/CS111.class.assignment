@@ -2,10 +2,10 @@ package 6609540023_assign3.Employee;
 
 public abstract class Employee {
 
-    protected String fullName;
-    protected String age;
-    protected String department;
-    protected int performanceScore;
+    private String fullName;
+    private String age;
+    private String department;
+    private int performanceScore;
 
     protected Employee(){
         fullName = null;
