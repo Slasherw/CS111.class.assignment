@@ -2,29 +2,37 @@ package 6609540023_assign3.Employee;
 
 public abstract class Employee {
 
-    protected String firstName;
-    protected String lastName;
+    protected String fullName;
     protected String age;
     protected String department;
     protected int performanceScore;
 
-    protected void setFullName(String fullName){
+    protected void setFullName(String name){
+        fullName = name;
+    }
+
+    protected String getFullName(){
+        return fullName;
+    }
+
+    protected String getName(){
         String[] name = fullName.split("-");
         if(name.length == 2){
-            firstName = name[0];
-            lastName = name[1];
-        }else {
-            System.out.println("Invalid input format. Please use 'Firstname-Lastname'");
+            return name[0];
+        }else{
+            return "Invalid input format.";
+        }
+    }
+    
+    protected String getLastName(){
+        String name = fullName.split("-");
+        if(name.length == 2){
+            return name[1];
+        }else{
+            return "Invalid input format";
         }
     }
 
-    protected String getFirstName(){
-        return firstName;
-    }
-
-    protected String getLastName(){
-        return lastName;
-    }
 
     protected void setAge(int age){
         age = this.age;
@@ -51,4 +59,5 @@ public abstract class Employee {
     }
 
     abstract protected double getMonthlyPayment();
+
 }
