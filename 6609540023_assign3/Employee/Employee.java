@@ -7,6 +7,13 @@ public abstract class Employee {
     protected String department;
     protected int performanceScore;
 
+    protected Employee(){
+        fullName = null;
+        age = 0;
+        department = null;
+        performanceScore = 0;
+    }
+
     protected void setFullName(String name){
         fullName = name;
     }
