@@ -14,7 +14,7 @@ public class HourlyEmployee extends Employee {
     }
 
     protected void setWorkHour(int workHour){
-        workHour = this.workHour;
+        this.workHour = workHour;
     }
 
     protected void setWorkingSessionPerMonth(int workingSessionPerMonth){
