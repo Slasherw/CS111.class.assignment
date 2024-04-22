@@ -1,6 +1,5 @@
 //นพกรณ์ สงเคราะห์
 //6609540023
-package 6609540023_assign3.Toaster;
 import java.util.ArrayList;
 interface Toastable{
     void toast();
@@ -8,22 +7,19 @@ interface Toastable{
 }
 
 public class Toaster{
-    private ArrayList<Toastable> item;
+    private ArrayList<Toastable> items;
 
-    //create toaster
     public Toaster(){
-        item = new ArrayList<>();
+        items = new ArrayList<>();
     }
 
     public void add(Toastable item){
-        //add new toastable item
-        item.add(item);
+        items.add(item);
     }
 
     public void print(){
-        //print out all the item in the toaster
-        for (Toastable toastable : item) {
-            System.out.println(item.getToastState());
+        for (int i =0;i < items.size();i++) {
+            System.out.println((i+1)+"."+ items.get(i));
         }
     }
 }

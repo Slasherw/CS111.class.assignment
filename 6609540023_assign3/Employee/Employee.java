@@ -3,19 +3,15 @@ package 6609540023_assign3.Employee;
 public abstract class Employee {
 
     private String fullName;
-    private String age;
+    private int age;
     private String department;
     private int performanceScore;
 
-    protected Employee(){
-        fullName = null;
-        age = 0;
-        department = null;
-        performanceScore = 0;
-    }
-
-    protected void setFullName(String name){
-        fullName = name;
+    protected Employee(String fullName, int age, String department, int performanceScore){
+        this.fullName=fullName;
+        this.age=age;
+        this.department=department;
+        this.performanceScore=performanceScore;
     }
 
     protected String getFullName(){
@@ -23,21 +19,11 @@ public abstract class Employee {
     }
 
     protected String getName(){
-        String[] name = fullName.split("-");
-        if(name.length == 2){
-            return name[0];
-        }else{
-            return "Invalid input format.";
-        }
+        return fullName.substring(0 , fullName.indexOf("-"));
     }
     
     protected String getLastName(){
-        String name = fullName.split("-");
-        if(name.length == 2){
-            return name[1];
-        }else{
-            return "Invalid input format";
-        }
+        return fullName.substring(fullName.indexOf("-") + 1);
     }
 
 
